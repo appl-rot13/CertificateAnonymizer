@@ -66,8 +66,8 @@ namespace CertificateAnonymizer
             using (var bitmap = SKBitmap.Decode(readFilePath))
             using (var canvas = new SKCanvas(bitmap))
             {
-                canvas.DrawRect(100, 720, 700, 80, new SKPaint { Color = SKColors.White });
-                canvas.DrawBitmap(bitmap, 0, 0);
+                canvas.DrawRect(300, 2150, 880, 250, new SKPaint { Color = SKColors.White });
+                canvas.DrawBitmap(bitmap, 0, 0, SKSamplingOptions.Default);
 
                 using (var stream = new SKFileWStream(writeFilePath))
                 {
